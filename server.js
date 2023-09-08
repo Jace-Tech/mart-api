@@ -28,9 +28,9 @@ app.use("*", (req, res) => {
 })
 
 // ERROR ROUTE
-// app.use((err, req, res, next) => {
-//   res.status(500).send(response(err?.message || "Internal Server Error", null, false))
-// }) 
+app.use((err, req, res, next) => {
+  res.status(500).send(response(err?.message || "Internal Server Error", null, false))
+}) 
 
 
 // SERVER APP
